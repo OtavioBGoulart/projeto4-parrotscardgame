@@ -1,0 +1,95 @@
+* {
+    background-color: #EEF9BF;
+}
+
+.nome-jogo {
+
+    margin: 40px auto 47px auto;
+}
+
+.nome-jogo h1 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 66px;
+    text-align: center;
+    letter-spacing: -0.004em;
+    color: #75B79E;
+}
+
+.container-cartas {
+    margin-left: 132px;
+    margin-right: 102px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.carta {
+    width: 117px;
+    height: 146px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    background-color: #a7e8af;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #99cea8;
+    position: relative;
+}
+
+.carta :hover {
+    cursor: pointer;
+}
+
+.costas-carta,
+.frente-carta {
+    width: 100px;
+    height: 100px;
+    background-color: #a7e8af;
+    backface-visibility: hidden;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+    position: absolute;
+}
+
+.frente-carta {
+    transform: rotateY(180deg);
+}
+
+.virar-frente {
+    transform: rotate(0deg);
+}
+
+.virar-costas {
+    transform: rotateY(-180deg);
+}
+
+@media (max-width: 613px) {
+
+    .nome-jogo h1 {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        letter-spacing: -0.004em;
+    }
+
+    .container-cartas {
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carta {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
